@@ -152,12 +152,69 @@
         id="level-container"
       ></div>
     </section>
+    <section class="flex justify-center mt-10">
+      <div class="join">
+        <div>
+          <label class="input validator join-item">
+            <svg
+              class="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </g>
+            </svg>
+            <input
+              id="input-search"
+              type=""
+              placeholder="Search Vocabulary Now"
+              required
+            />
+          </label>
+        </div>
+        <button id="btn-search" class="btn btn-primary join-item">
+          Search
+        </button>
+      </div>
+    </section>
+    <section id="spinner" class="flex justify-center items-center py-10 hidden">
+      <span class="loading loading-bars loading-xl"></span>
+    </section>
     <section>
       <div
         id="word-container"
-        class="bg-gray-100 p-10 w-11/12 mx-auto grid grid-cols-3 gap-5"
-      ></div>
+        class="bg-gray-100 p-10 w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-5"
+      >
+        <div
+          class="text-center bg-sky-100 rounded-xl space-y-6 shadow-sm col-span-full py-5"
+        >
+          <p class="opacity-55">Please Select a lesson....</p>
+          <h1 class="text-3xl font-bangla">একটি Lesson Select করুন।</h1>
+        </div>
+      </div>
     </section>
+    <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <!-- এখানে JS দিয়ে word details বসবে -->
+        <div id="details-container" class="space-y-5"></div>
+
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- Close button -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
     <script src="./index.js"></script>
   </body>
 </html>
